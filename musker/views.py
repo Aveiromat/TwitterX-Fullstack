@@ -28,7 +28,7 @@ def profile_list(request):
         profiles = Profile.objects.exclude(user = request.user)
         return render(request,'profile_list.html', {"profiles":profiles} )
     else:
-        messages.success(request, ("Você deve estar logado.."))
+        messages.success(request, ("Você deve estar logado para acessar..."))
         return redirect('home')
 
 def profile(request, pk):
@@ -45,7 +45,7 @@ def profile(request, pk):
             current_user_profile.save()
         return render(request, 'profile.html', {'profile':profile, "tweets":tweets})
      else:
-        messages.success(request, ("Você deve estar logado.."))
+        messages.success(request, ("Você deve estar logado para acessar..."))
         return redirect('home')
      
 def login_user(request):
