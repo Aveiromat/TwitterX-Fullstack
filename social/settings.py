@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-skhzhc-#ts6w7!*$h@h5mboa)&ew@r#&g$xmd!f6ak8g_x0a)0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'aveiromat.pythonanywhere.com']
 
 
 # Application definition
@@ -77,11 +77,11 @@ WSGI_APPLICATION = 'social.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'twitter_clone_ebac',
-        'USER': 'twitter_clone_user',
-        'PASSWORD': 'Matheusaf10!',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': '1234',
         'HOST': 'localhost',
-        'PORT': '5433',
+        'PORT': '5432',
     }
 }
 
