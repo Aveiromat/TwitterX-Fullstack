@@ -25,13 +25,14 @@ jobs:
         python -m pip install --upgrade pip
         python -m pip install --upgrade poetry
 
-    - name: View poetry --help
-      run: poetry --help
-
     - name: Install dependencies
-      shell: bash
-      run: python -m poetry install
+      run: poetry install
+
+    - name: List installed packages
+      run: poetry show
+
+    - name: Python version
+      run: python --version
 
     - name: Test
-      run: |
-        poetry run python manage.py test
+      run: poetry run python manage.py test
